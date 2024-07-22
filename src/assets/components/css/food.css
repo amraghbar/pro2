@@ -1,0 +1,140 @@
+.card:hover {
+    box-shadow: 0 0 10px rgba(205, 17, 17, 0.68); 
+    transform: scale(1.05); 
+    background-color: #ffca40;
+}
+body{
+    background:red;
+}
+img{
+    background-size: cover;
+}
+.card:hover .btn {
+    opacity: 1; 
+}
+#catsa .card {
+    border-radius: 22px; 
+}
+ #products .delet{
+    font-weight: 700;
+    padding: 13px;
+    border: solid 2px #ffca40;
+    border-radius: 14px;
+}
+#products .delet:hover{
+    font-weight: 700;
+    padding: 13px;
+    background-color: #ffca40;
+    border-radius: 14px;
+    
+}
+.AllCats,
+.productInCat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.productInCat{
+    gap: 2rem !important;
+}
+#PInC{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+#Products {
+    width: 70%;
+    overflow-y: auto;
+}
+
+
+
+.productInCart {
+    border-bottom: 3px solid #ffca40 ;
+}
+#CartTotal {
+    position: fixed;
+    top: 1rem;
+    right: 4.9rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background: #ffca40;
+    width: 22.4rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#imgCardF{
+    height: 12rem;
+    width: 13rem;
+}
+
+.clik{
+    cursor: pointer;
+}
+#catprod{
+    display: flex;
+    gap: 10px;
+}
+
+
+  #SideCart {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.cart-content {
+    padding: 20px;
+}
+
+  .cart-content {
+    padding: 20px;
+  }
+  #cartButton {
+    position: relative;
+}
+
+#cartCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: none;
+}
+
+#cartCount.show {
+    display: inline-block;
+}
+
+
+  @media screen and (max-width:767px) {
+    #CartTotal {
+        width: 24%;
+        font-size: 17px;
+    }
+    
+}

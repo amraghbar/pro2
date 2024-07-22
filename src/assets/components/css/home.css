@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+aside,
+iframe {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+aside {
+    background-color: #f2ededbb;
+    transition: margin-left 0.5s ease;
+}
+
+aside #auppers p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+aside #auppers p span {
+    color: #c81b1e;
+}
+
+aside #centerSe ul {
+    padding: 1rem;
+}
+
+aside #centerSe ul li {
+    transition: ease all 250ms;
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+aside #centerSe ul li:hover {
+    background-color: #ffca40;
+}
+
+.active {
+    background-color: #ffca40;
+}
+
+.userinfo {
+    background-color: white;
+    border: solid white;
+    border-radius: 25px;
+    padding: 1rem;
+    margin: auto;
+}
+
+.userinfo img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 70%;
+    object-fit: contain;
+}
+
+.userinfo button {
+    width: 12rem;
+    background-color: #f2ededbb;
+    color: black;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.userinfo .userdata {
+    font-weight: 300;
+    font-size: 10px;
+}
+
+#menui {
+    display: none;
+    margin-right: 10px; 
+
+}
+
+@media screen and (max-width: 767px) {
+    #menui {
+        display: block;
+    }
+body{
+    flex-wrap: nowrap;
+}
+    aside {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    aside.show-sidebar {
+        display: block;
+        width: 34%;
+        margin-left: 0;
+    }
+
+    iframe {
+        transition: margin-left 4% 0.5s ease;
+    }
+
+    main.show-sidebar {
+        margin-left: 8%;
+    }
+}
