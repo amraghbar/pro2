@@ -61,7 +61,7 @@ function Login() {
   }, []);
 
   return (
-    <div className="d-flex">
+    <div className="d-flex justify-content-center align-items-center  p-2">
       <div
         className="leftdiv col-12 col-md-6 d-flex flex-wrap flex-column justify-content-center"
         style={{ height: "90vh" }}

@@ -17,7 +17,7 @@ import Notifications from '../pages/Notifications';
 
 function Dash() {
   const [activeTab, setActiveTab] = useState(0);
-  const [selectedComponent, setSelectedComponent] = useState();
+  const [selectedComponent, setSelectedComponent] = useState(<Food/>);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -78,8 +78,8 @@ function Dash() {
   };
 
   return (
-    <div className='d-flex'>
-      <aside className="col-2" id="sidebar" style={{ height: '100vh', width: '500px' }}>
+    <div className='d-flex col-12'>
+      <aside className="col-2" id="sidebar" style={{ height: '100vh', width: '220px' }}>
         <div id="auppers" className="col-12 b d-flex justify-content-center align-items-center flex-row gap-3 p-2" style={{ height: '9vh' }}>
           <img src="src/assets/components/css/img/logo.png" alt="Logo" height="50px" />
           <p className="m-0">Smart<span>POS</span></p>

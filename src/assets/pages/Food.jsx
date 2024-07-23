@@ -1,129 +1,132 @@
 import React, { useState } from 'react';
+import { FaArrowLeftLong } from "react-icons/fa6";
+
+import '../components/css/food.css';
 
 const dataObj = [
   {
     name: "Cold Drinks",
-    imgSrc:"../css/img/cola.png",
+    imgSrc: "src/assets/components/css/img/cola.png",
     products: [
       {
         name: "Sprite Tin Cane",
         price: 100,
-        imgSrc: "../css/img/Sprite Tin Cane - 480x923.png",
+        imgSrc: "src/assets/components/css/img/Sprite Tin Cane - 480x923.png",
       },
       {
         name: "Cocktail",
         price: 120,
-        imgSrc: "../css/img/Cocktail Glass - 640x630.png",
+        imgSrc: "src/assets/components/css/img/Cocktail Glass - 640x630.png",
       },
       {
         name: "Strawberry Juice",
         price: 140,
-        imgSrc: "../css/img/Tomato Juice - 480x606.png",
+        imgSrc: "src/assets/components/css/img/Tomato Juice - 480x606.png",
       },
     ],
   },
   {
     name: "Burgers",
-    imgSrc: "../css/img/burger.png",
+    imgSrc: "src/assets/components/css/img/burger.png",
     products: [
       {
         name: "Beef Burger",
         price: 100,
-        imgSrc: "../css/img/burger_1.png",
+        imgSrc: "src/assets/components/css/img/burger_1.png",
       },
       {
         name: "Double Cheeseburger",
         price: 120,
-        imgSrc: "../css/img/burger_2.png",
+        imgSrc: "src/assets/components/css/img/burger_2.png",
       },
       {
         name: "Cheese Burger",
         price: 140,
-        imgSrc: "../css/img/burger_3.png",
+        imgSrc: "src/assets/components/css/img/burger_3.png",
       },
     ],
   },
   {
     name: "Pizza",
-    imgSrc: "../css/img/pizaa.png",
+    imgSrc: "src/assets/components/css/img/pizaa.png",
     products: [
       {
         name: "Greek Pizza",
         price: 100,
-        imgSrc: "../css/img/pizza_1.png",
+        imgSrc: "src/assets/components/css/img/pizza_1.png",
       },
       {
         name: "Neapolitan Pizza",
         price: 120,
-        imgSrc: "../css/img/pizza_2.png",
+        imgSrc: "src/assets/components/css/img/pizza_2.png",
       },
       {
         name: "Sicilian Pizza",
         price: 140,
-        imgSrc: "../css/img/pizza_3.png",
+        imgSrc: "src/assets/components/css/img/pizza_3.png",
       },
     ],
   },
   {
     name: "Wok",
-    imgSrc: "../css/img/wok.png",
+    imgSrc: "src/assets/components/css/img/wok.png",
     products: [
       {
         name: "Stir-fry Recipes",
         price: 100,
-        imgSrc: "../css/img/wok1.jpg",
+        imgSrc: "src/assets/components/css/img/wok1.jpg",
       },
       {
         name: "Chinese Food on Wok",
         price: 120,
-        imgSrc: "../css/img/wok2.jpg",
+        imgSrc: "src/assets/components/css/img/wok2.jpg",
       },
       {
         name: "Meet Chinese Food",
         price: 140,
-        imgSrc: "../css/img/wok3.webp",
+        imgSrc: "src/assets/components/css/img/wok3.webp",
       },
     ],
   },
   {
     name: "Dessert",
-    imgSrc: "../css/img/sweet.png",
+    imgSrc: "src/assets/components/css/img/sweet.png",
     products: [
       {
         name: "Ice Cream",
         price: 100,
-        imgSrc: "../css/img/co (2).png",
+        imgSrc: "src/assets/components/css/img/co (2).png",
       },
       {
         name: "Cookies",
         price: 120,
-        imgSrc: "../css/img/co (1).png",
+        imgSrc: "src/assets/components/css/img/co (1).png",
       },
       {
         name: "Puddings",
         price: 140,
-        imgSrc: "../css/img/co (3).png",
+        imgSrc: "src/assets/components/css/img/co (3).png",
       },
     ],
   },
   {
     name: "Pasta",
-    imgSrc: "../css/img/pasta.png",
+    imgSrc: "src/assets/components/css/img/pasta.png",
     products: [
       {
         name: "Cheese Macaronis",
         price: 100,
-        imgSrc: "../css/img/pasta22.png",
+        imgSrc: "src/assets/components/css/img/pasta22.png",
       },
       {
         name: "Farfalle",
         price: 120,
-        imgSrc: "../css/img/pa2.jpg",
+        imgSrc: "src/assets/components/css/img/pa2.jpg",
       },
       {
         name: "Linguine Carbonara",
         price: 140,
-        imgSrc: "../css/img/pa3.jpeg",
+        imgSrc: "src/assets/components/css/img/pa3.jpeg",
       },
     ],
   },
@@ -136,8 +139,8 @@ function Food() {
 
   const renderCatsDiv = () => {
     return dataObj.map((cat, index) => (
-      <div key={index} className="col-12 col-md-10 col-lg-8 p-3 text-center click card d-flex align-items-center gap-3 mb-1 justify-content-center">
-        <img src={cat.imgSrc} id="imgCardF" className="card-img-top col-12 p-2 click" alt={cat.name} onClick={() => setSelectedCategoryIndex(index)} />
+      <div key={index} className="col-12 col-md-10 col-lg-8 p-3 text-center click card d-flex align-items-center gap-3 mb-1 justify-content-center" style={{ width: '30%' }}>
+        <img src={cat.imgSrc} id="imgCardF" className="card-img-top col-12 p-2 click" style={{ width: '13rem', height: '11rem' }} alt={cat.name} onClick={() => setSelectedCategoryIndex(index)} />
         <div className="card-body text-center">
           <h3 className="col-12 card-title fw-bold">{cat.name}</h3>
         </div>
@@ -147,7 +150,7 @@ function Food() {
 
   const showProductsInCat = (catIndex) => {
     return dataObj[catIndex].products.map((product, productIndex) => (
-      <div key={productIndex} className="product col-12 col-md-10 col-lg-8 p-3 card d-flex align-items-center click gap-3 mb-1 justify-content-center" onClick={() => addToCart(catIndex, productIndex)}>
+      <div key={productIndex} style={{  width: '20rem' }} className="product col-12 col-md-10 col-lg-8 p-3 card d-flex align-items-center click gap-3 mb-1 justify-content-center" onClick={() => addToCart(catIndex, productIndex)}>
         <img src={product.imgSrc} style={{ height: '13rem', width: '13rem' }} className="card-img-top col-12 p-2" alt={product.name} />
         <p className="col-12 card-title fw-bold">{product.name}</p>
         <p className="col-12 card-title fw-bold">{product.price} $</p>
@@ -157,7 +160,7 @@ function Food() {
 
   const addToCart = (catIndex, productIndex) => {
     const product = dataObj[catIndex].products[productIndex];
-    setSideCartProducts(prev => {
+    setSideCartProducts((prev) => {
       const existingProduct = prev.find(p => p.name === product.name);
       if (existingProduct) {
         return prev.map(p => p.name === product.name ? { ...p, qty: p.qty + 1 } : p);
@@ -167,11 +170,11 @@ function Food() {
   };
 
   const incrementQty = (index) => {
-    setSideCartProducts(prev => prev.map((p, i) => i === index ? { ...p, qty: p.qty + 1 } : p));
+    setSideCartProducts((prev) => prev.map((p, i) => i === index ? { ...p, qty: p.qty + 1 } : p));
   };
 
   const decrementQty = (index) => {
-    setSideCartProducts(prev => {
+    setSideCartProducts((prev) => {
       if (prev[index].qty > 1) {
         return prev.map((p, i) => i === index ? { ...p, qty: p.qty - 1 } : p);
       } else {
@@ -181,7 +184,7 @@ function Food() {
   };
 
   const deleteItem = (index) => {
-    setSideCartProducts(prev => prev.filter((_, i) => i !== index));
+    setSideCartProducts((prev) => prev.filter((_, i) => i !== index));
   };
 
   const getTotal = () => {
@@ -192,21 +195,24 @@ function Food() {
   const closeCart = () => setCartOpen(false);
 
   return (
-    <div className="App">
-      <div id="Products">
+    <div className="App d-flex flex-wrap" style={{ width: '90%' }}>
+      <button id="cartButton" className="btn" onClick={openCart} style={{ width: '100%', height: '6vh', margin: '2rem' }}>
+        Open Cart (<span id="cartCount">{sideCartProducts.reduce((sum, item) => sum + item.qty, 0)}</span>)
+      </button>
+      <div id="catprod" className="col-10 container d-flex flex-wrap p-2 justify-content-center align-items-center gap-3" style={{ width: '94%' }}>
         {selectedCategoryIndex === null ? renderCatsDiv() : (
-          <>
-            <button className="btn btn-warning p-2 mb-0 btnba click" onClick={() => setSelectedCategoryIndex(null)}>
-              <i className="fa-solid fa-arrow-left-long"></i>
+          <div className='d-flex flex-wrap p-2 justify-content-center align-items-center gap-3'>
+            <button className="btn btn-warning p-2 mb-0 btnba click" style={{marginRight:'100%'}} onClick={() => setSelectedCategoryIndex(null)}>
+            <FaArrowLeftLong />
             </button>
             <h2 className="category-name col-12">{dataObj[selectedCategoryIndex].name}</h2>
             {showProductsInCat(selectedCategoryIndex)}
-          </>
+          </div>
         )}
       </div>
 
       {cartOpen && (
-        <div id="SideCart" style={{ width: '425px' }}>
+        <div id="SideCart" className="side-cart" style={{ width: '425px' }}>
           <button onClick={closeCart}>Close</button>
           <div id="cartItems">
             {sideCartProducts.map((el, index) => (
@@ -222,19 +228,18 @@ function Food() {
                 </div>
                 <div className="col-12 d-flex justify-content-between p-2">
                   <p>Price: {el.price}</p>
-                  <p>Total: {el.price * el.qty}</p>
-                  <i className="fa-solid fa-trash-can click" onClick={() => deleteItem(index)}></i>
+                  <p>Total: {el.price * el.qty} $</p>
+                  <button className="btn btn-outline-warning text-dark click" onClick={() => deleteItem(index)}>Remove</button>
                 </div>
               </div>
             ))}
-            <div id="cartTotal">
-              <p>Final Price : {getTotal()}</p>
+            <div className="col-12 d-flex align-items-center gap-2 justify-content-center">
+              <p className="fw-bold">Total:</p>
+              <p className="fw-bold">{getTotal()} $</p>
             </div>
           </div>
         </div>
       )}
-
-      <button id="cartButton" onClick={openCart}>Cart</button>
     </div>
   );
 }
